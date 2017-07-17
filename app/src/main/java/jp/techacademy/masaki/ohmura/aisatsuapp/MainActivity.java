@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button2.setOnClickListener(this);
 
     }
-    int Hour = 13 ;
+    int Hour = 1 ;
     int Minute =0 ;
 
     @Override
@@ -53,14 +53,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay,  int minute) {
+                        Hour = hourOfDay;
+                        Minute = minute;
                     }
                 },
                 Hour,
                 Minute,
                 true);
         timePickerDialog.show();
-
-        return;
 
     }
 }
